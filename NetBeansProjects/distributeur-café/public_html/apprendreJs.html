@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TODO supply a title</title>
+
+	</head>
+	<body>
+		<div id="test1">lorem ipsum...1</div>
+		<div id="test2">lorem ipsum...2</div>
+		<div id="test3">lorem ipsum...3</div>
+
+
+		<script type="text/javascript">
+			var x = new Array(5);
+			console.log(x);
+			console.log(x.length);
+			x = new Array(1, 2);
+			console.log(x);
+			var y = ["a", , , , "e"];
+			var z = [["a", "b", "c"], [1, 2, 3]];
+			console.log(y);
+			console.log(z);
+			console.log(z[1][1]);
+			var t1 = ["a", "b", "c"];
+			var t2 = [1, 2, 3];
+			var x = [t1, t2];
+			console.log(x);
+			var f = [[, , , , , ], [, , ], [, , ]];
+			console.log(f);
+			var obj = {prop1: 'valeur', prop2: 'valeur', prop3: 'valeur'};
+			console.log(obj);
+			obj.prop1 = 'mon nom';
+			console.log(obj.prop1);
+			obj['prop1'] = 'mon nom';
+			console.log(obj['prop1']);
+			var n = ["a", "b", "c"];
+			n.test = "oui";
+			n.test2 = "non";
+			console.log(n);
+			for (var i = 0; i < n.length; i++)
+			{
+				alert(i + "=" + n[i]);
+			}
+			function size(obj)
+			{
+				var size = 0;
+				for (var key in obj)
+				{
+					if (obj.hasOwnProperty(key))
+						size++;
+				}
+				return size;
+			}
+			console.log(size(obj));
+			function $(elm, css)
+			{
+				for (var y in css)
+				{
+					document.getElementById(elm).style[y] = css[y];
+				}
+			}
+			$('test1', {color: '#FF0000', font: '50px Arial'});
+			$('test2', {color: '#FF00FF', font: '18px Arial'});
+			$('test3', {color: '#FFFF00', font: '9px Arial'});
+
+			var obj = {
+				chef: [
+					{nom: 'dupont', prenom: 'maurice'},
+					{nom: 'gent', prenom: 'albert'},
+					{nom: 'allard', prenom: 'jean'}
+				],
+				souschef: [
+					{nom: 'fragi', prenom: 'marcel'},
+					{nom: 'renaud', prenom: 'david'},
+					{nom: 'alli', prenom: 'laure'}
+				]
+			};
+			for(var i=0, il=obj.chef.length; i<il;i++)
+			{
+				document.write(obj.chef[i].nom);
+				document.write(obj.souschef[i].nom);
+			}
+
+		</script>
+
+	</body>
+</html>
