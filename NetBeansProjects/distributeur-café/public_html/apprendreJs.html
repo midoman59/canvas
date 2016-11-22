@@ -102,6 +102,19 @@
 			{
 				document.write(obj.chef[i].nom);
 			}
+			function myFun(x,y)
+			{
+				var result=x;
+				result +="-";
+				result+=y;
+				for(var i=2;i<arguments.length;i++)
+				{
+					result +="-"+arguments[i];
+				}
+				return result;
+			}
+			var x=myFun("a","b","c","d","e");
+			alert(x);
 		</script>
 
 	</body>
