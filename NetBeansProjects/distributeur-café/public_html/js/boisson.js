@@ -64,7 +64,7 @@ function preparerLong()
 	stockcafe=Number(stockCafe)-Number(long.cafe);
 	stockcafe=Number(stockCafe)-Number(long.cafe);
 	stockcafe=Number(stockCafe)-Number(long.cafe);
-	stockEau=Nu
+	}
 	
 
 
