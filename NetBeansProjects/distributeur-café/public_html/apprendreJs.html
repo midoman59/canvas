@@ -77,8 +77,8 @@
 			};
 			for (var i = 0, il = obj.chef.length; i < il; i++)
 			{
-				document.write(obj.chef[i].nom);
-				document.write(obj.souschef[i].nom);
+				/*document.write(obj.chef[i].nom);
+				document.write(obj.souschef[i].nom);*/
 			}
 			var sort_by = function (field, reverse, primer)
 			{
@@ -90,19 +90,17 @@
 						a = primer(a);
 						b = primer(b);
 					}
-					if (a < b)
-						return reverse * -1;
-					if (a > b)
-						return reverse * 1;
-					rerurn 0;
+					if (a < b) return reverse * -1;
+					if (a > b) return reverse * 1;
+					return 0;
 
 				}
 			}
 
 			obj.chef.sort(sort_by('prenom', false));
-			for (var i = 0, il = objet.chef.length; i < il; i++)
+			for (var i = 0, il = obj.chef.length; i < il; i++)
 			{
-				document.write(objet.chef[i].nom);
+				document.write(obj.chef[i].nom);
 			}
 
 
