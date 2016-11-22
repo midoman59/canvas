@@ -115,6 +115,22 @@
 			}
 			var x=myFun("a","b","c","d","e");
 			alert(x);
+			
+			function test(a,b){
+				return 2+a+b;
+			}
+			alert(test(10,2));
+			alert(test());
+			
+			var obj={
+				fnc1:function (){
+					return this.fnc2();
+				},
+				fnc2:function (){
+					return this.vars;
+				},
+				
+			}
 		</script>
 
 	</body>
