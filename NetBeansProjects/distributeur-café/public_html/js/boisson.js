@@ -69,7 +69,8 @@ function preparerLong()
 
 
 function myFunction() {
- console.log("aminekhai");   
+ console.log("aminekhai");
+ 
 }
 
 
