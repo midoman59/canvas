@@ -98,8 +98,13 @@
 
 				}
 			}
-			
-			obj.chef.sort( sort_by)
+
+			obj.chef.sort(sort_by('prenom', false));
+			for (var i = 0, il = objet.chef.length; i < il; i++)
+			{
+				document.write(objet.chef[i].nom);
+			}
+
 
 		</script>
 
