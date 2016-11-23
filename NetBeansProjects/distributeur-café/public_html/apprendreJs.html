@@ -172,15 +172,18 @@
 			 for(i=0;i<MAX;++i){}
 			 t=(new Date()).getTime()-t;
 			 console.log(t); */
-			var m = 8;
-			function message(a, b)
+
+
+			for (var i = 0; i <= 5; i++)
 			{
-				var c = a + b + m;
-				console.log(c);
-				return c;
-				
+				(function () {
+					var k = i;
+					console.log(k);
+					window.setTimeout(function () {
+						alert(k);
+					}, 5000);
+				})();
 			}
-			alert(message(3, 4));
 
 
 		</script>
