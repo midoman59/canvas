@@ -173,18 +173,50 @@
 			 t=(new Date()).getTime()-t;
 			 console.log(t); */
 
-
-			for (var i = 0; i <= 5; i++)
+			/*
+			 for (var i = 0; i <= 5; i++)
+			 {
+			 (function () {
+			 var k = i;
+			 console.log(k);
+			 window.setTimeout(function () {
+			 alert(k);
+			 }, 5000);
+			 })();
+			 }
+			 */
+			var str = "ma chaine de caractères";
+			alert(str.length);
+			alert(str.toUpperCase());
+			alert(str.toLowerCase());
+			alert(str[1]);
+			alert(("chaine").toUpperCase());
+			//manipuler des tableaux de chaines de caractères
+			var tab = ["laurance", "yves", "mireille"];
+			tab.push("cyril");
+			tab.push("stephane", "gabriel");
+			alert(tab);
+			tab.shift();
+			tab.pop();
+			tab.unshift("Sergent Garcia");
+			alert(tab);
+			var oklm = "laurence folle de joie";
+			oklm = oklm.split("e");
+			for (var i = 0, il = oklm.length; i < il; i++)
 			{
-				(function () {
-					var k = i;
-					console.log(k);
-					window.setTimeout(function () {
-						alert(k);
-					}, 5000);
-				})();
+				console.log(oklm[i]);
 			}
 
+			var famille=
+			{
+			pere:"olivier",
+			oncle:"françois",
+			fils:["thomas","aurelien","stephane"]
+			}
+			alert(famille.oncle);
+			alert(famille.fils[0]);
+			alert(famille["fils"][0]);
+			
 
 		</script>
 
