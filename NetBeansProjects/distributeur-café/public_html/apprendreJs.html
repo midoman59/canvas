@@ -155,6 +155,23 @@ for(var i=0;i<10;i++)
 console.log(t);
   }
 }
+//difference de temps
+var MAX =1000000,t=0,i=0;
+
+t=(new Date()).getTime();
+for(i=0;i<MAX;i+=1){}
+t=(new Date()).getTime()-t;
+console.log(t);
+
+t=(new Date()).getTime();
+for(i=0;i<MAX;i++){}
+t=(new Date()).getTime()-t;
+console.log(t);
+
+t=(new Date()).getTime();
+for(i=0;i<MAX;++i){}
+t=(new Date()).getTime()-t;
+console.log(t);
 
 		</script>
 
