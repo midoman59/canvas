@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>TODO supply a title</title>
-
+		<meta charset="utf-8">
 	</head>
 	<body>
 		<div id="test1">lorem ipsum...1</div>
@@ -246,25 +246,25 @@
 //				default : console.log("inconu");
 //					break;
 //			}
-			var text="";
-			switch(new Date().getDay())
+			var text = "";
+			switch (new Date().getDay())
 			{
 				case 1:
 				case 2:
 				case 3:
-				text="looking forward to the weekend";
-				break;
-			case 4:
-			case 5:
-				case 6:
-					text="Samedi";
+					text = "looking forward to the weekend";
 					break;
-					
+				case 4:
+				case 5:
+				case 6:
+					text = "Samedi";
+					break;
+
 				case 0:
-					text="Dimanche";
+					text = "Dimanche";
 					break;
 				default:
-					text="On bosse c'est la semaine";
+					text = "On bosse c'est la semaine";
 			}
 			alert(text);
 
