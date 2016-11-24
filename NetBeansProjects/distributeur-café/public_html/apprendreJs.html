@@ -185,43 +185,89 @@
 			 })();
 			 }
 			 */
-			var str = "ma chaine de caractères";
-			alert(str.length);
-			alert(str.toUpperCase());
-			alert(str.toLowerCase());
-			alert(str[1]);
-			alert(("chaine").toUpperCase());
-			//manipuler des tableaux de chaines de caractères
-			var tab = ["laurance", "yves", "mireille"];
-			tab.push("cyril");
-			tab.push("stephane", "gabriel");
-			alert(tab);
-			tab.shift();
-			tab.pop();
-			tab.unshift("Sergent Garcia");
-			alert(tab);
-			var oklm = "laurence folle de joie";
-			oklm = oklm.split("e");
-			for (var i = 0, il = oklm.length; i < il; i++)
+//			var str = "ma chaine de caractères";
+//			alert(str.length);
+//			alert(str.toUpperCase());
+//			alert(str.toLowerCase());
+//			alert(str[1]);
+//			alert(("chaine").toUpperCase());
+//			//manipuler des tableaux de chaines de caractères
+//			var tab = ["laurance", "yves", "mireille"];
+//			tab.push("cyril");
+//			tab.push("stephane", "gabriel");
+//			alert(tab);
+//			tab.shift();
+//			tab.pop();
+//			tab.unshift("Sergent Garcia");
+//			alert(tab);
+//			var oklm = "laurence folle de joie";
+//			oklm = oklm.split("e");
+//			for (var i = 0, il = oklm.length; i < il; i++)
+//			{
+//				console.log(oklm[i]);
+//			}
+//
+//			var famille =
+//					{
+//						pere: "olivier",
+//						oncle: "françois",
+//						fils: ["thomas", "aurelien", "stephane"]
+//					}
+//			alert(famille.oncle);
+//			alert(famille.fils[0]);
+//			alert(famille["fils"][0]);
+//
+//			for (var elm in famille)
+//			{
+//				console.log(elm + " " + famille[elm]);
+//			}
+			//le switch
+//			var test = "A";
+//			switch (test)
+//			{
+//				case "A":
+//					break;
+//				case "B":
+//					break;
+//				default :
+//					break;
+//			}
+//			var test = prompt("entrer un caractère");
+//			switch (test)
+//			{
+//				case "A": alert("A");
+//					break;
+//				case "B": alert("B");
+//					break;
+//				case "#": alert("#");
+//					break;
+//				case "@": alert("@");
+//					break;
+//				default : console.log("inconu");
+//					break;
+//			}
+			var text="";
+			switch(new Date().getDay())
 			{
-				console.log(oklm[i]);
+				case 1:
+				case 2:
+				case 3:
+				text="looking forward to the weekend";
+				break;
+			case 4:
+			case 5:
+				case 6:
+					text="Samedi";
+					break;
+					
+				case 0:
+					text="Dimanche";
+					break;
+				default:
+					text="On bosse c'est la semaine";
 			}
+			alert(text);
 
-			var famille=
-			{
-			pere:"olivier",
-			oncle:"françois",
-			fils:["thomas","aurelien","stephane"]
-			}
-			alert(famille.oncle);
-			alert(famille.fils[0]);
-			alert(famille["fils"][0]);
-			
-			for (var elm in famille)
-			{
-				console.log(elm+" "+famille[elm]);
-			}
-			
 
 		</script>
 
