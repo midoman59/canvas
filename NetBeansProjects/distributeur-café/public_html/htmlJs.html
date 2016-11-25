@@ -5,14 +5,18 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<div id="capt1"><span id="capt2">cliquez-moi phase de capture.</span></div>
-		<div id="boul1"><span id="boul2">cliquez-moi phase de bouillonement.</span></div>
-		<div id="position"></div>
-		<input id='field'  type="text" />
-		<div id="down"></div>
-		<form id="amine" action="http://google.fr">
-			<input id="nom" type="text">
+		<!--		<div id="capt1"><span id="capt2">cliquez-moi phase de capture.</span></div>
+				<div id="boul1"><span id="boul2">cliquez-moi phase de bouillonement.</span></div>
+				<div id="position"></div>
+				<input id='field'  type="text" />
+				<div id="down"></div>
+				<form id="amine" action="http://google.fr">
+					<input id="nom" type="text">
+				</form>-->
+		<form id="form">
+			<input id="field" type="text">
 		</form>
+		<div id="down"></div>
 		<script type="text/javascript" src="js/amineFramwork.js"></script>
 		<script type="text/javascript">
 //			var div=document.getElementsByTagName(div);
@@ -123,32 +127,44 @@
 //			boul2.addEventListener('click', function () {
 //				alert("l'evenement du span vient de déclencher.");
 //			}, false);
-			var position = document.getElementById('position');
-			document.addEventListener('mousemove', function (e) {
-				position.innerHTML = "Position X : " + e.clientX + "px<br/>Position Y : " + e.clientY + 'px';
-				window.document.title = e.clientX + '' + e.clientY;
-			});
-			var field = document.getElementById('field');
-			var down = document.getElementById('down');
-			document.addEventListener('keydown',function (e){
-				down.innerHTML=e.keyCode;
-			});
-			
-			
-			var valider=document.getElementById('nom');
-			document.addEventListener('keydown',function(e)
-			{
-				if (e.keyCode=='69')
-				{
-					var envoyer= document.getElementById('amine');
-					envoyer.submit();
-					console.log("envoyé");
+//			var position = document.getElementById('position');
+//			document.addEventListener('mousemove', function (e) {
+//				position.innerHTML = "Position X : " + e.clientX + "px<br/>Position Y : " + e.clientY + 'px';
+//				window.document.title = e.clientX + '' + e.clientY;
+//			});
+//			var field = document.getElementById('field');
+//			var down = document.getElementById('down');
+//			document.addEventListener('keydown',function (e){
+//				down.innerHTML=e.keyCode;
+//			});
+//			
+//			
+//			var valider=document.getElementById('nom');
+//			document.addEventListener('keydown',function(e)
+//			{
+//				if (e.keyCode=='69')
+//				{
+//					var envoyer= document.getElementById('amine');
+//					envoyer.submit();
+//					console.log("envoyé");
+//				}
+//				else
+//				{
+//					console.log("envoi echoué")
+//				}
+//					
+//			});
+
+			String.fromCharCode(84, 101, 115, 116);//affiche : test et transforme les numéros en ccaractère
+
+			var form = document.getElementById('form');
+			form.addEventListener('keydown', function (event) {
+				var lettre = string.fromCharCode(event.keyCode);
+				document.getElementById('down').innerHTML = lettre;  
+				if (event.keyCode == 13) {
+					event.preventDefault();
+					document.getElementById('down').innerHTML = "ENTRER";
 				}
-				else
-				{
-					console.log("envoi echoué")
-				}
-					
 			});
 		</script>
 		<script type="text/javascript" src="js/amineFramwork.js"></script>
