@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="style/font-awesome.css"  rel="stylesheet" type="text/css" /> 
+		<link rel="stylesheet" href="style/foundation.css" type="text/css">
+		<!--		<link rel="stylesheet" href="style/morpion.css" type="text/css">-->
+
+	</head>
+	<body>
+		<div id="conteneur">
+			<div class="row small-up-4 num">
+				<div class="column boutton" >
+					<input type="button" value="Down" name="down" id="btn1"/>
+				</div>
+				<div class="column boutton" >
+					<input type="button" value="Down" name="down" id="btn2" />
+				</div>
+				<div class="column boutton" >
+					<input type="button" value="Down" name="down" id="btn3"/>
+				</div>
+				<div class="column boutton" >
+					<input type="button" value="Down" name="down" id="btn4"/>
+				</div>
+				<div class="column element"></div>
+				<div class="column element"></div>
+				<div class="column element"></div>
+				<div class="column element"></div>
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+				<div class="column element"></div>	
+			</div>
+		</div>
+		<style type="text/css">
+			#conteneur{width: 600px;height: 600px;margin: auto;position: relative;}
+			.column{border:1px solid #147cc0;height: 120px;}
+			.boutton{border: none;}
+			input{width: 120px;height: 40px;color: #e1faea; background-color: #2199e8;font-weight: bold;}
+			#caree
+			{
+				position: absolute;
+				width: 100px;
+				height: 50px;
+				top: 0;
+				left: 0;
+				background: red;
+
+
+			}
+		</style>
+		<script>
+			var casee = [
+				['', '', '', ''],
+				['', '', '', ''],
+				['', '', '', ''],
+				['', '', '', '']
+			];
+			var element = document.getElementsByClassName('element');
+			console.log(element);
+			var button = document.getElementsByTagName("input");
+			console.log(button);
+			console.log(button[0]);
+			var joueur = 0;
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			var btn4 = document.getElementById("btn4");
+
+			btn1.addEventListener('click', function () {
+
+				for (var j = 3; j >= 0; j--)
+				{
+					(function (j) {
+						
+						if (element[j * 4].innerHTML == '')//&& element[(j+1)*4]== '' // 
+						{
+							casee[0][j] = element[j * 4].innerHTML = joueur % 2 == 0 ? 'X' : 'O';
+							console.log([j * 4]);
+						}
+					})(j);
+				}
+			});
+			btn2.addEventListener('click', function () {
+
+				for (var j = 0; j < 4; j++)
+				{
+					(function (j) {
+						console.log([j * 4]);
+						casee[1][j] = element[j * 4 + 1].innerHTML = joueur % 2 == 0 ? 'X' : 'O';
+
+					})(j);
+				}
+			});
+			btn3.addEventListener('click', function () {
+
+				for (var j = 0; j < 4; j++)
+				{
+					(function (j) {
+						console.log([j * 4]);
+						casee[2][j] = element[j * 4 + 2].innerHTML = joueur % 2 == 0 ? 'X' : 'O';
+
+					})(j);
+				}
+			});
+			btn4.addEventListener('click', function () {
+
+				for (var j = 0; j < 4; j++)
+				{
+					(function (j) {
+						console.log([j * 4]);
+						casee[3][j] = element[j * 4 + 3].innerHTML = joueur % 2 == 0 ? 'X' : 'O';
+
+					})(j);
+				}
+			});
+//				button[i].addEventListener('click', function () {
+//					console.log(i);
+//					alert("j'ai reussi");
+//					for (var j = 0; j < 4; j++)
+//					{
+//						(function (i, j) {
+//							console.log([i * 4 + j]);
+////							casee[i][j] = element[(i * 4) + j].innerHTML = joueur % 2 == 0 ? 'X' : 'O';
+//
+//						})(i, j);
+//					}
+//				}
+//				);
+//			}
+//			switch (i)
+//			{
+//				case 1 :
+//				case 2:
+//				case 3:
+//				case 4:
+//					button[i].addEventListener('click', function () {
+//						alert("j'ai reussi");
+//						console.log(i);
+//						
+//
+//					}
+//					);
+			var checkForm = function (options) {
+				var $this = prototype = {
+					initialize: function () {
+						document.addEventListener("keydown", $this.keysChoice);
+					},
+					keysChoice: function (event)
+					{
+						var caree = document.getElementById(options.id);
+
+						switch (event.keyCode)
+						{
+							case 37:
+								$this.mouveLeft(caree);
+								break;
+							case 38:
+								$this.mouveTop(caree);
+								break;
+							case 39:
+								$this.mouveRight(caree);
+								break;
+							case 40:
+								$this.mouveDown(caree);
+								break;
+						}
+					},
+					mouveDown: function (elm)
+					{
+						elm.style.top = (parseInt(elm.offsetTop) + 10) + "px";
+						console.log(elm.offsetTop);
+
+					},
+					mouveTop: function (elm)
+					{
+						elm.style.top = (parseInt(elm.offsetTop) - 10) + "px";
+
+					},
+					mouveLeft: function (elm)
+					{
+						elm.style.left = (parseInt(elm.offsetLeft) - 10) + "px";
+					},
+					mouveRight: function (elm)
+					{
+						elm.style.left = (parseInt(elm.offsetLeft) + 10) + "px";
+					}
+				};
+				return $this.initialize();
+			};
+
+			var form = new checkForm(
+					{
+						id: "caree"
+					}); //instantiation de la fonctio
+
+
+
+
+
+
+
+
+
+		</script>
+		<!--
+				elm.parentNode.removeChild();
+				var span = document.createElement('span')
+				span.innerHTML = elm.getAttribute('data-error')
+				elm.parentNode.appendChild(span);
+		-->
+	</body>
+</html>
