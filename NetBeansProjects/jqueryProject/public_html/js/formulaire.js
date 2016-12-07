@@ -71,4 +71,5 @@ console.log($(".nom").val());
 console.log(rejexNom.test($(".nom").value));
 
 
+
  
