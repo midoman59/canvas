@@ -1,0 +1,41 @@
+
+/* 
+    Created on : 7 déc. 2016, 10:01:59
+    Author     : amine
+*/
+
+.conteneur
+{
+	min-width: 350px;
+	max-width: 1200px;
+	background-color: #8a8a8a;
+	margin: auto;
+}
+.titre
+{
+	height: 75px;
+	border: 1px solid gray;
+	
+}
+.buttons
+{
+	padding-top: 5px;
+}
+.titre .column:nth-child(2)
+{
+	text-align: right;
+}
+.formulaire
+{
+	background-color: whitesmoke;
+}
+.valider
+{
+	text-align: right;
+}
+.columns
+{
+	text-align: left;
+}
+
+
