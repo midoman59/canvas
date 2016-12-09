@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="utf-8">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="style/jquery-ui.css" type="text/css">
+		<link rel="stylesheet" href="style/lightbox.css" type="text/css">
+		<link rel="stylesheet" href="style/jquery.bxslider.css" type="text/css">
+		<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui.js" ></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js" ></script>
+		<style>
+			.bx-prev
+			{
+				
+			}
+			
+		</style>
+
+
+	</head>
+	<body>
+		<h3>n'importe quoi</h3>
+		<div>
+			azfzafzafzafzafzafzafzafzafza
+		</div>
+		<div style="width: 500px; height: 300px;margin: auto">
+	azdazdzadzafzafzafzafzafzafzafza
+		</div>	
+
+		<script type="text/javascript">
+//			$(document).ready(function () {
+//				$('.bxslider').bxSlider();
+//			});
+//			
+//			
+//			function rafraichir(){
+//    var progress = $('#barre').progressbar('option', 'value'); // récupération de la valeur actuelle
+//
+//    if(progress < 100){
+//        $('#barre').progressbar('option', 'value', progress + 1); // on incrémente la valeur de 1 si elle est strictement inférieure à 100
+//	setTimeout(rafraichir, 50); // puis on relance la fonction
+//    }
+//}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
+////création de plugin jQuery);
+
+(function($){
+	$.fn.amine=function()
+	{
+		$(this).each(function(){
+			alert("element");
+		});
+	}
+})(jQuery);
+
+$("div").amine();
+/////////////////////////////////////////////////////////////////////////////
+(function($){
+	$.fn.background=function(color)
+	{
+		$(this).each(function(){
+			$(this).css("background",color);
+		});
+	}
+})(jQuery);
+
+$("div").background("red");
+		</script>
+		<script type="text/javascript" src="js/lightbox.js" ></script>
+		<script type="text/javascript" src="js/amineFramwork.js"></script>
+	</body>
+</html>
