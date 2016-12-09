@@ -11,7 +11,8 @@ var rejexTel = /^0[0-9]{9}$/;
 var rejexVille = /^([a-zA-Z]{1})[-a-zA-Z]{3,}$/;
 var rejexCp = /^[0-9]{5}$/;
 var rejexPays = /^([a-zA-Z]{1})[-a-zA-Z]{3,}$/;
-
+var rejexDate=/^([0-9]{2})[/]([0-9]{2})[/]([0-9]{4})$/;
+$(".idtt").hide();
 $( function() {
     $( "#datepicker" ).datepicker();
   } );
@@ -53,7 +54,7 @@ $(".bancaire .buttons").click(function(){
 });
 function rejex(rejex, input)
 {
-	input.blur( function () {
+	input.keyup( function () {
 		if (rejex.test(input.val()) == false)
 		{
 			input.css("border","2px solid red");
@@ -66,9 +67,10 @@ function rejex(rejex, input)
 }
 rejex(rejexNom,$(".nom"));
 rejex(rejexPrenom,$(".prenom"));
-rejex(rejex,$(".prenom"));
-console.log($(".nom").val());
-console.log(rejexNom.test($(".nom").value));
+rejex(rejexPays,$(".lieu"));
+rejex(rejexVille,$(".pays"));
+rejex(rejexTel,$(".telephone"));
+rejex(rejexDate,$(".date"));
 
 
 
