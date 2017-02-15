@@ -1,0 +1,30 @@
+body{background: url(webdesign5.jpg)}
+#conteneur{width: 1550px;margin: auto}
+nav{padding-left: 730px;background-color: rgb(205,220,187)}
+ul{text-decoration: none;margin-bottom: 0px}
+li{display: inline-block;font-size: 16px;color: white;margin-right: 38px;}
+section{width: 1000px;margin:0 auto; background: url(back-section.jpg);
+		-moz-box-shadow: 0px 3px 10px 1px #656565;
+		-webkit-box-shadow: 0px 3px 10px 1px #656565;
+		-o-box-shadow: 0px 3px 10px 1px #656565;
+		box-shadow: 0px 3px 10px 1px #656565;}
+figure{margin: 0;}
+figure img{vertical-align: top}
+figure img, figure div:nth-child(1){display: inline-block}
+figure p{font-size: 28px;color: rgb(81,81,81)}
+figure p:nth-child(1){padding-left: 31px;}
+figure p:nth-child(2){padding-left: 178px;margin-bottom: 0}
+figure a{padding-left: 445px;font-size: 9px;color: rgb(97,127,39);}
+article h1{font-size: 18px;}
+article p{font-size: 9px;}
+#conteneur div{width: 1000px;margin:0 auto;margin-top: 28px;}
+#conteneur div aside{width: 558px;display: inline-block;background-image: url(back-actualites.jpg); border: 1px solid white;
+    intline: 5px solid orange;
+    outline-offset: 0px;}
+#conteneur div aside h1{font-size: 20px;color: rgb(169,80,22);font-weight: bold}
+#conteneur div aside h2{font-size: 13px;color: rgb(84,59,37);font-weight: bold}
+#conteneur div aside article div:nth-child(1){width: 52px;display: inline-block;}
+#conteneur div aside article div:nth-child(2){width: 500px;display: inline-block;}
+#conteneur div aside p{font-size: 10px}
+#conteneur div aside p span{color: rgb(169,80,22);}
+#conteneur div section{width: 437px;display: inline-block;}
