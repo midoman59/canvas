@@ -1,0 +1,314 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 févr. 2017, 09:19:08
+    Author     : admin
+*/
+
+.showbox
+{
+	float: left;
+	margin: 4em 1em;
+	background-color: #fff;
+	text-align: center;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 50px 50px 50px 50px;
+	border-color: red green red blue;
+
+}
+.showbox:nth-child(1){
+	transform: rotate(45deg);
+
+}
+.showbox:nth-child(2){
+	transform: translate(9px,0px) rotate(135deg);
+
+}
+.showbox:nth-child(3){
+	transform: translate(-264px,141px)rotate(-45deg);
+
+
+}
+.showbox:nth-child(4){
+	transform:translate(-255px,142px) rotate(-135deg) ;	
+}
+.fin
+{
+	clear: both;	
+}
+.cube
+{
+
+	width: 100px;
+	height: 60px;
+	border: 2px solid green;
+	background-color: #fff;
+	line-height: 60px;
+	text-align: center;
+	transition: 1s ease-in-out;
+}
+.cube:hover
+{
+	transform: translate(3em,0);
+
+}
+.espace
+{	
+	position: relative;
+	width: 1000px;
+	height: 600px;
+	background-image:url('img/outerspace.jpg');
+	margin: auto;
+	margin-top: 50px;
+}
+.espace img
+{
+	position: absolute;
+	top: 385px;
+	transition: 2s ease-in-out;
+}
+.espace img:hover
+{
+	transform: translate(800px,-450px)rotate(80deg)
+}
+.piste
+{
+	width: 1500px;
+	height: 100px;
+	margin-top: 50px;
+	background-color: grey;
+	margin: auto;
+}
+.button
+{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	position: relative;
+	margin-right: 20px;
+	transition: 2s ease-in-out;
+}
+.balle
+{
+	top: 0px;
+	left: 120px;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	transition: 2s ease-in-out;
+}
+
+.button:hover
+{
+	width: 1380px;
+}
+.button:hover .balle
+{
+	transform: translate(1280px,0px)rotate(720deg);
+	background-color: yellow;
+	border: 1px solid transparent;
+	border-radius: 50%;
+}
+.piste2
+{
+	margin-top: 50px;
+	width: 100%;
+	height: 100px;
+	background-color: rgba(45,45,45,0.2);
+	position: relative;
+}
+.babale
+{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	height: 40px;
+	width: 100px;
+	background-color: indianred;
+	transition: 2s left ease-in-out,1s 2s top ease-in-out;
+
+}
+.piste2:hover .babale
+{
+	left: calc(100% - 100px);
+	top: calc(100% - 40px);
+}
+.images
+{
+	width: 1200px;
+	margin: auto;
+}
+.img
+{
+	display: inline-block;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	transition: 1s transform ease-in-out;
+}
+.img:nth-child(2)
+{
+	transform-origin:top right;
+}
+.img:nth-child(3)
+{
+	transform-origin:top left;	
+}
+.img:nth-child(2)
+{
+	transform-origin:5px 5px;	
+}
+.img:nth-child(2)
+{
+	transform-origin:5px 5px;	
+}
+.img:nth-child(1):hover
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.img:nth-child(2):hover
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+
+
+}
+.img:nth-child(3):hover
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.img:nth-child(4):hover
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.img:nth-child(5):hover
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+/*changement d'image'*/
+
+#cf {
+	position:relative;
+	height:281px;
+	width:450px;
+	margin:0 auto;
+}
+
+#cf img {
+	position:absolute;
+	height:281px;
+	width:450px;
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+	opacity:0;
+}
+.progression:hover .niveau
+{
+	background-color: green;
+}
+.progression
+{
+	margin: auto auto;
+}
+
+.niveau
+{
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	display: inline-block;
+}
+.progression:hover .niveau:nth-child(1)
+{
+	transition-delay: 1s;	
+}
+.progression:hover .niveau:nth-child(2)
+{
+	transition-delay: 1.5s;	
+}
+.progression:hover .niveau:nth-child(3)
+{
+	transition-delay: 2s;	
+}
+.progression:hover .niveau:nth-child(4)
+{
+	transition-delay: 2.5s;	
+}
+.progression:hover .niveau:nth-child(5)
+{
+	transition-delay: 3s;	
+}
+.progression:hover .niveau:nth-child(6)
+{
+	transition-delay: 3.5s;	
+}
+.progression:hover .niveau:nth-child(7)
+{
+	transition-delay: 4s;	
+}
+.progression:hover .niveau:nth-child(8)
+{
+	transition-delay: 4.5s;	
+}
+.progression:hover .niveau:nth-child(9)
+{
+	transition-delay: 5s;	
+}
+.progression .niveau:nth-child(1)
+{
+	transition-delay: 5s;	
+}
+.progression .niveau:nth-child(2)
+{
+	transition-delay: 4.5s;	
+}
+.progression .niveau:nth-child(3)
+{
+	transition-delay: 4s;	
+}
+.progression .niveau:nth-child(4)
+{
+	transition-delay: 3.5s;	
+}
+.progression .niveau:nth-child(5)
+{
+	transition-delay: 3s;	
+}
+.progression .niveau:nth-child(6)
+{
+	transition-delay: 2.5s;	
+}
+.progression .niveau:nth-child(7)
+{
+	transition-delay: 2s;	
+}
+.progression .niveau:nth-child(8)
+{
+	transition-delay: 1.5s;	
+}
+.progression .niveau:nth-child(9)
+{
+	transition-delay: 1s;	
+}
